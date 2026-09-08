@@ -1,0 +1,124 @@
+.recipe-tile {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe-img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.recipe-label {
+    width: 300px;
+    text-align: center;
+    margin: 12px 0px;
+    font-size: 14px;
+}
+
+.recipe-link {
+    margin-bottom: 20px;
+}
+
+.details-button {
+    background: #02aff0;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border: 2px solid #02aff0;
+    padding: 4px 8px;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.details-button:hover {
+    background: white;
+    color: #02aff0;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border: 2px solid #02aff0;
+    padding: 4px 8px;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* .recipe-tile {
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition), box-shadow var(--transition);
+    cursor: default;
+}
+
+.recipe-tile:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.recipe-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+}
+
+.recipe-card-body {
+    padding: 16px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.recipe-label {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.45;
+    color: var(--color-text);
+    letter-spacing: -0.01em;
+}
+
+.recipe-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--color-text-mid);
+    font-weight: 400;
+}
+
+.recipe-meta-dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--color-teal);
+    display: inline-block;
+}
+
+.details-button {
+    margin-top: auto;
+    background: transparent;
+    color: var(--color-teal);
+    border: 1.5px solid var(--color-teal);
+    padding: 7px 14px;
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background var(--transition), color var(--transition);
+    align-self: flex-start;
+}
+
+.details-button:hover {
+    background: var(--color-teal);
+    color: var(--color-white);
+} */

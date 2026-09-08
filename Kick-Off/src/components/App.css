@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
+
+:root {
+    /* Brand colors — extracted directly from kick-off-logo.png     */
+    --color-teal: #148ca0;
+    /* logo fill — primary brand    */
+    --color-teal-dark: #0e6e7e;
+    /* teal darkened ~15% for hover */
+    --color-teal-light: #e6f5f7;
+    /* teal tint for focus rings    */
+    --color-amber: #dc7800;
+    /* logo ring — one bold moment  */
+    --color-amber-dark: #b86200;
+    /* amber darkened for hover     */
+    --color-charcoal: #282828;
+    /* logo wordmark                */
+
+    /* Surface & text */
+    --color-surface: #f5f8f9;
+    /* slight teal-wash off-white   */
+    --color-stone: #e0eaec;
+    /* teal-tinted border/divider   */
+    --color-white: #ffffff;
+    --color-text: #282828;
+    /* matches wordmark             */
+    --color-text-mid: #5a7378;
+    /* desaturated teal-gray        */
+    --color-overlay: rgba(14, 110, 126, 0.50);
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --shadow-card: 0 2px 12px rgba(20, 140, 160, 0.08), 0 1px 3px rgba(20, 140, 160, 0.05);
+    --shadow-card-hover: 0 8px 32px rgba(20, 140, 160, 0.16), 0 2px 8px rgba(20, 140, 160, 0.08);
+    --shadow-modal: 0 24px 64px rgba(14, 110, 126, 0.28);
+
+    --font: 'DM Sans', system-ui, sans-serif;
+    --transition: 160ms ease;
+}
+
+/* base styles */
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
