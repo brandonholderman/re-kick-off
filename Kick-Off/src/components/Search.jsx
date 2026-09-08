@@ -3,7 +3,7 @@ import RecipeList from "./RecipeList";
 import Axios from "axios";
 import "./Search.css"
 
-function Search() {
+const Search = () => {
     const [query, setQuery] = useState("");
     const [recipes, setRecipes] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -36,7 +36,7 @@ function Search() {
 
     return (
         <div className="container">
-            <img src="src\assets\kick-off-logo.png" className="logo" alt="src\assets\placeholder.gif" />
+            <img src="src\assets\kick-off-logo.png" className="logo" alt="src/assets/placeholder.gif" />
             <form className="search-form" onSubmit={handleSubmit}>
                 <input 
                     className="user-input" 

@@ -3,7 +3,7 @@ import Search from './Search';
 import './App.css';
 
 
-function App() {
+const App = () => {
     return (
         <div className="App">
             <Search />
