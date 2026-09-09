@@ -1,4 +1,4 @@
-.recipe-tile {
+/* .recipe-tile {
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -45,9 +45,9 @@
     font-size: 15px;
     border-radius: 4px;
     cursor: pointer;
-}
+} */
 
-/* .recipe-tile {
+.recipe-tile {
     background: var(--color-white);
     border-radius: var(--radius-md);
     overflow: hidden;
@@ -121,4 +121,4 @@
 .details-button:hover {
     background: var(--color-teal);
     color: var(--color-white);
-} */
+}
