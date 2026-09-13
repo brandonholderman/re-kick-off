@@ -43,3 +43,21 @@
     background: transparent;
     border: none;
 }
+
+.recipe-link {
+    padding-left: 1rem;
+    border-bottom: 1px solid #eee;
+    margin: 0.7rem;
+    padding-bottom: 0.7rem;
+    display: flex;
+    justify-content: center;
+}
+
+.recipe-link-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--color-teal-dark);
+    margin-top: 0.4rem;
+    margin-right: 0.5rem;
+}

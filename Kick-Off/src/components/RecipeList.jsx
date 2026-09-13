@@ -30,14 +30,14 @@ const RecipeList = ({ data }) => {
                         {mealType && (
                             <span style={{ textTransform: "capitalize" }}>{mealType}</span>
                         )}
-                        {mealType && totalTime && <span className="recipe-meta-dot" />}
-                        {totalTime && <span>{totalTime}</span>}
+                        {/* {mealType && totalTime && <span className="recipe-meta-dot" />} */}
+                        {/* {totalTime && <span>{totalTime}</span>} */}
                     </div>
                 )}
                 <div className="recipe-button">
                     <button className="details-button"
                         onClick={() => { setShow(true); setRecipeData(data) }}>Recipe Details</button>
-                    <RecipeDetails onClose={() => setShow(false)} show={show} data={recipeData} />
+                    <RecipeDetails onClose={() => setShow(false)} show={show} data={recipeData} cookTime={totalTime} />
                 </div>
             </div>
         </div>

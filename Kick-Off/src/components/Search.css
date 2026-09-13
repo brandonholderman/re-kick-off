@@ -52,11 +52,11 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 4rem;
     width: 100%;
-    max-width: 1100px;
-    margin-top: 56px;
+    max-width: 1200px;
+    margin-top: 4rem;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
     .recipe-list {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -69,8 +69,14 @@
 }
 
 @media (max-width: 560px) {
+.container {
+        padding: 3rem 1rem 4rem;
+    }
+
     .recipe-list {
         grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 36px;
     }
 
     .search-form {
@@ -80,17 +86,21 @@
 
     .user-input {
         width: 100%;
+        padding: 12px 16px;
+        font-size: 15px;
         border-bottom: 1px solid var(--color-stone);
     }
 
     .search-button {
         width: 100%;
+        padding: 12px 16px;
+        font-size: 14px;
         border-radius: 0 0 var(--radius-md) var(--radius-md);
     }
 }
 
 .instruction-text {
-    margin-top: 16px;
+    margin-top: 1rem;
     font-size: 14px;
     font-weight: 300;
     color: var(--color-text-mid);
@@ -98,7 +108,7 @@
 }
 
 .empty-state {
-    margin-top: 80px;
+    margin-top: 5rem;
     text-align: center;
     color: var(--color-text-mid);
     font-size: 14px;

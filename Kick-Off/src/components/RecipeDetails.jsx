@@ -29,7 +29,8 @@ const RecipeDetails = (props) => {
                         return <li key={index}>{ingredients}</li>
                     })}</ul>
                 </div>
-                <div>
+                <div className="recipe-link">
+                    {/* <span className="recipe-link-dot" /> */}
                     <a href={props.data.recipe.url} target="_blank" rel="noopener noreferrer">Recipe Instructions</a>
                 </div>
                 <div className="modal-footer">
