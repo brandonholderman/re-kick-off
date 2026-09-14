@@ -38,15 +38,13 @@ const Search = () => {
         <div className="container">
             <img src="src\assets\kick-off-logo.png" className="logo" alt="src/assets/placeholder.gif" />
             <form className="search-form" onSubmit={handleSubmit}>
-                <div className="search-bar">
-                    <input 
-                        className="user-input" 
-                        type="text"
-                        placeholder="Search by ingredient — chicken, lemon, garlic…"
-                        value={query}
-                        onChange={(e) => setQuery(e.target.value)}
-                    />
-                </div>
+                <input 
+                    className="user-input" 
+                    type="text"
+                    placeholder="Search by ingredient — chicken, lemon, garlic…"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                />
                 <input className="search-button" type="submit" value="Search" />
             </form>
             {!searched && (

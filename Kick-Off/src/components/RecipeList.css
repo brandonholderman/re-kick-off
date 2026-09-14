@@ -121,3 +121,15 @@
     background: var(--color-teal);
     color: var(--color-white);
 }
+
+@media (max-width: 560px) {
+    .recipe-label {
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+
+    .recipe-meta {
+        font-size: 13px;
+        margin-top: 0;
+    }
+}

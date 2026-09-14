@@ -23,7 +23,7 @@ const RecipeDetails = (props) => {
                     <h4 className="modal-title">{props.data.recipe.label}</h4>
                 </div>
                 <div className="modal-body">
-                    <img src={props.data.recipe.image} alt="" />
+                    <img src={props.data.recipe.image} alt="src\assets\placeholder.gif" />
                     {/* <a href={ props.data.recipe.url } className="recipe-link">Full Recipe</a> */}
                     <ul className="modal-list">{props.data.recipe.ingredientLines.map((ingredients, index) => {
                         return <li key={index}>{ingredients}</li>
