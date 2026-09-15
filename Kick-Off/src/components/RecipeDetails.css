@@ -41,7 +41,14 @@
 .modal-close {
     cursor: pointer;
     background: transparent;
-    border: none;
+    /* border: none; */
+    border: 3px solid #00698f;
+    border-radius: var(--radius-md);
+    background-color: #00698f;
+    color: white;
+    padding-top: 0.15rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 .recipe-link {
