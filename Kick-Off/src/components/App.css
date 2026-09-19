@@ -2,30 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
 
 :root {
-    /* Brand colors — extracted directly from kick-off-logo.png     */
+/* Brand colors — extracted directly from kick-off-logo.png     */
     --color-teal: #148ca0;
-    /* logo fill — primary brand    */
     --color-teal-dark: #0e6e7e;
-    /* teal darkened ~15% for hover */
     --color-teal-light: #e6f5f7;
-    /* teal tint for focus rings    */
-    --color-amber: #dc7800;
-    /* logo ring — one bold moment  */
-    --color-amber-dark: #b86200;
-    /* amber darkened for hover     */
     --color-charcoal: #282828;
-    /* logo wordmark                */
 
-    /* Surface & text */
+    /* Surfaces & text */
     --color-surface: #f5f8f9;
-    /* slight teal-wash off-white   */
-    --color-stone: #e0eaec;
-    /* teal-tinted border/divider   */
     --color-white: #ffffff;
+    /* card / modal background    */
+    --color-stone: #e0eaec;
+    /* borders & dividers         */
     --color-text: #282828;
-    /* matches wordmark             */
     --color-text-mid: #5a7378;
-    /* desaturated teal-gray        */
     --color-overlay: rgba(14, 110, 126, 0.50);
 
     --radius-sm: 6px;
@@ -40,6 +30,30 @@
     --transition: 160ms ease;
 }
 
+/* ─── Dark Mode Tokens ───────────────────────────────────────── */
+[data-theme="dark"] {
+    --color-teal: #2ab3cc;
+    /* brightened — readable on dark bg  */
+    --color-teal-dark: #1e92a8;
+    --color-teal-light: rgba(42, 179, 204, 0.15);
+    --color-charcoal: #202122;
+    /* inverted — light text             */
+
+    --color-surface: #0f1a1c;
+    /* deep teal-black page bg           */
+    --color-surface-2: #1a2c30;
+    /* card / modal bg                   */
+    --color-stone: #2a4048;
+    /* borders & dividers                */
+    --color-text: #e8eef0;
+    --color-text-mid: #7aaab4; 
+    --color-overlay: rgba(0, 0, 0, 0.70);
+
+    --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.35), 0 1px 3px rgba(0, 0, 0, 0.25);
+    --shadow-card-hover: 0 8px 32px rgba(0, 0, 0, 0.50), 0 2px 8px rgba(0, 0, 0, 0.30);
+    --shadow-modal: 0 24px 64px rgba(0, 0, 0, 0.60);
+}
+
 /* base styles */
 * {
     box-sizing: border-box;
@@ -47,3 +61,51 @@
     /* background-color: #2b2828; */
 }
 
+body {
+    font-family: var(--font);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 250ms ease, color 250ms ease;
+}
+
+/* ─── App Shell ─────────────────────────────────────────────── */
+.App {
+    min-height: 100vh;
+    background-color: var(--color-surface);
+    transition: background-color 250ms ease;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-surface-2);
+    border: 1.5px solid var(--color-stone);
+    border-radius: var(--radius-lg);
+    padding: 7px 14px 7px 10px;
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-mid);
+    box-shadow: var(--shadow-card);
+    transition: border-color var(--transition), color var(--transition),
+        background var(--transition), box-shadow var(--transition);
+}
+
+.theme-toggle:hover {
+    border-color: var(--color-teal);
+    color: var(--color-teal);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.theme-toggle-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}

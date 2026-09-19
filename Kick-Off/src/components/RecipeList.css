@@ -48,7 +48,7 @@
 } */
 
 .recipe-tile {
-    background: var(--color-white);
+    background: var(--color-surface-2);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-card);
     display: flex;
@@ -67,6 +67,7 @@
     aspect-ratio: 4 / 3;
     object-fit: cover;
     display: block;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 
 .recipe-card-body {
