@@ -1,20 +1,28 @@
 /* Recipe details modal styling */
 .modal {
     position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    background-color: var(--color-overlay);
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 100;
+    padding: 24px;
+    backdrop-filter: blur(3px);
+    transition: background-color var(--transition);
 }
 
 .modal-content {
-    width: 500px;
-    background-color: #fff;
-    border: 3px solid #02aff0;
+    width: 100%;
+    max-width: 520px;
+    max-height: 88vh;
+    background: var(--color-surface-2);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-modal);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: background var(--transition);
 }
 
 .modal-header,
