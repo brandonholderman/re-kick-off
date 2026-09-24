@@ -59,7 +59,8 @@
 
 .recipe-tile:hover {
     /* transform: translateY(-3px); */
-    box-shadow: var(--color-teal);
+    /* box-shadow: var(--color-teal); */
+    border: 1px solid var(--color-teal)
 }
 
 .recipe-img {
