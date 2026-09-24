@@ -21,6 +21,10 @@ const RecipeDetails = (props) => {
             <div className="modal-content" onClick={e => e.stopPropagation()}>
                 <div className="modal-header">
                     <h4 className="modal-title">{props.data.recipe.label}</h4>
+                    {/* <button onClick={props.onClose} className="modal-full-recipe"> */}
+                        {/* <MdClose style={{ color: "#7b7b7b", width: "40px", height: "40px" }} /> */}
+                        {/* <CloseIcon />
+                    </button> */}
                 </div>
                 <div className="modal-body">
                     <img src={props.data.recipe.image} alt="src\assets\placeholder.gif" />
@@ -31,13 +35,10 @@ const RecipeDetails = (props) => {
                 </div>
                 <div className="recipe-link">
                     {/* <span className="recipe-link-dot" /> */}
-                    <a href={props.data.recipe.url} target="_blank" rel="noopener noreferrer">Recipe Instructions</a>
+                    <a href={props.data.recipe.url} target="_blank" rel="noopener noreferrer" className="modal-full-recipe">Full recipe ↗</a>
+                    <button onClick={props.onClose} className="modal-full-recipe">Close</button>
                 </div>
                 <div className="modal-footer">
-                    <button onClick={props.onClose} className="modal-close">
-                        {/* <MdClose style={{ color: "#7b7b7b", width: "40px", height: "40px" }} /> */}
-                        <CloseIcon />
-                    </button>
                 </div>
             </div>
         </div>

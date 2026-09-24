@@ -41,9 +41,9 @@ const App = () => {
                 aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
             >
                 {theme === "light" ? <MoonIcon /> : <SunIcon />}
-                <span className="theme-toggle-label">
+                {/* <span className="theme-toggle-label">
                     {theme === "light" ? "Dark mode" : "Light mode"}
-                </span>
+                </span> */}
             </button>
             <Search />
         </div>
