@@ -67,9 +67,9 @@
     flex-direction: column;
     align-items: start; */
     /* gap: 0.5rem; */
+    /* line-height: 1.5; */
     text-align: start;
     transition: color var(--transition);
-    line-height: 1.5;
 }
 
 /* .modal-list li { */

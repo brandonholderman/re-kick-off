@@ -1,5 +1,6 @@
 // import { MdClose } from "react-icons/md"
 import { filterHealthLabels } from "../utils/filterLabels";
+import { v4 as uuid } from 'uuid';
 import "./RecipeDetails.css"
 
 const CloseIcon = () => (
@@ -31,8 +32,6 @@ const RecipeDetails = (props) => {
                 <div className="modal-body">
                     <img src={props.data.recipe.image} alt="src\assets\placeholder.gif" />
                     
-                    
-
                     <div className="modal-section show-allergy">
                         <p className="modal-section-label">Dietary Info</p>
                         <ul>
@@ -61,11 +60,11 @@ const RecipeDetails = (props) => {
                     <div className="modal-section">
                         <p className="modal-section-label">Ingredients</p>
                         <div className="modal-list">
-                            <ul>
-                                {props.data.recipe.ingredientLines.map((ingredients, index) => (
-                                    <li key={index}>{ingredients}</li>
-                                ))}
-                            </ul>
+                            {props.data.recipe.ingredientLines.map(ingredients => (
+                                <ul key={uuid()}>
+                                    <li>{ingredients}</li>
+                                </ul>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -76,8 +75,8 @@ const RecipeDetails = (props) => {
                     <button onClick={props.onClose} className="modal-full-recipe">Close</button>
                 </div>
 
-                <div className="modal-footer">
-                </div>
+                {/* <div className="modal-footer">
+                </div> */}
             </div>
         </div>
     );
