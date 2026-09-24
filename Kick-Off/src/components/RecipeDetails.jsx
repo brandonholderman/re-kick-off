@@ -16,6 +16,7 @@ const CloseIcon = () => (
 const RecipeDetails = (props) => {
     if (!props.show) return null;
     const healthLabels = filterHealthLabels(props.data.recipe.healthLabels);
+    const nutritionInfo = props.data.recipe.digest;
 
     return (
         <div className="modal" onClick={props.onClose}>
@@ -29,15 +30,25 @@ const RecipeDetails = (props) => {
                 </div>
                 <div className="modal-body">
                     <img src={props.data.recipe.image} alt="src\assets\placeholder.gif" />
-                    <div className="show-more">
-                        <ul>{healthLabels.map(label => {
-                            return <li key={label}>{label}</li>
-                        })}
+                    <div className="show-allergy">
+                        <ul>
+                            {healthLabels.map(label => (
+                                <li key={label}>{label}</li>
+                            ))}
                         </ul>
                     </div>
-                    <ul className="modal-list">{props.data.recipe.ingredientLines.map((ingredients, index) => {
-                        return <li key={index}>{ingredients}</li>
-                    })}</ul>
+                    <div className="show-nutrition">
+                        {nutritionInfo.map(info => (
+                            <ul>
+                                <li>{info.label} - {Math.floor(info.total)}{info.unit}</li>
+                            </ul>
+                        ))}
+                    </div>
+                    <ul className="modal-list">
+                        {props.data.recipe.ingredientLines.map((ingredients, index) => (
+                            <li key={index}>{ingredients}</li>
+                        ))}
+                    </ul>
                 </div>
                 <div className="recipe-link">
                     {/* <span className="recipe-link-dot" /> */}
