@@ -43,7 +43,7 @@ const RecipeDetails = (props) => {
                     </div>
 
                     <div className="modal-section">
-                        <p className="modal-section-label">Nutrition Per Serving</p>
+                        <p className="modal-section-label">Nutrition Info</p>
                         <div className="show-nutrition">
                             {nutritionInfo.map(info => (
                                 <ul key={info.label}>
@@ -60,11 +60,13 @@ const RecipeDetails = (props) => {
 
                     <div className="modal-section">
                         <p className="modal-section-label">Ingredients</p>
-                        <ul className="modal-list">
-                            {props.data.recipe.ingredientLines.map((ingredients, index) => (
-                                <li key={index}>{ingredients}</li>
-                            ))}
-                        </ul>
+                        <div className="modal-list">
+                            <ul>
+                                {props.data.recipe.ingredientLines.map((ingredients, index) => (
+                                    <li key={index}>{ingredients}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
