@@ -57,8 +57,36 @@
     text-align: start;
 }
 
-.modal-list {
+/* .modal-list {
     text-align: start;
+} */
+
+.modal-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal-list li {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text);
+    line-height: 1.5;
+    padding-left: 14px;
+    position: relative;
+    transition: color var(--transition);
+}
+
+.modal-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-amber);
 }
 
 .modal-close {
@@ -111,4 +139,89 @@
     cursor: pointer;
     background: var(--color-teal);
     color: #ffffff;
+}
+
+/* Shared section block inside modal-body */
+.modal-section {
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--color-stone);
+    transition: border-color var(--transition);
+}
+
+.modal-section:last-child {
+    border-bottom: none;
+}
+
+/* Section label — reused across all three sections */
+.modal-section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-mid);
+    margin-bottom: 12px;
+    transition: color var(--transition);
+    text-align: start;
+}
+
+/* ── Allergy / health label tags ── */
+.show-allergy ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+}
+
+.show-allergy li {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-teal-dark);
+    background: var(--color-teal-light);
+    border: 1px solid transparent;
+    padding: 3px 10px;
+    border-radius: 20px;
+    transition: color var(--transition), background var(--transition);
+}
+
+[data-theme="dark"] .show-allergy li {
+    color: var(--color-teal);
+    background: rgba(42, 179, 204, 0.12);
+}
+
+/* ── Nutrition grid ── */
+.show-nutrition {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 16px;
+}
+
+/* Each <ul> is one row — kill list semantics, treat as a row */
+.show-nutrition ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: contents;
+}
+
+.show-nutrition li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 5px 0;
+    font-size: 13px;
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-stone);
+    gap: 8px;
+    transition: color var(--transition), border-color var(--transition);
+}
+
+/* Bold the value portion — the number+unit after " - " */
+.show-nutrition li::after {
+    content: attr(data-value);
+    font-weight: 500;
+    color: var(--color-text);
+    flex-shrink: 0;
+    transition: color var(--transition);
 }

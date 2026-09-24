@@ -30,31 +30,50 @@ const RecipeDetails = (props) => {
                 </div>
                 <div className="modal-body">
                     <img src={props.data.recipe.image} alt="src\assets\placeholder.gif" />
-                    <div className="show-allergy">
+                    
+                    
+
+                    <div className="modal-section show-allergy">
+                        <p className="modal-section-label">Dietary Info</p>
                         <ul>
                             {healthLabels.map(label => (
                                 <li key={label}>{label}</li>
                             ))}
                         </ul>
                     </div>
-                    <div className="show-nutrition">
-                        {nutritionInfo.map(info => (
-                            <ul>
-                                <li>{info.label} - {Math.floor(info.total)}{info.unit}</li>
-                            </ul>
-                        ))}
+
+                    <div className="modal-section">
+                        <p className="modal-section-label">Nutrition Per Serving</p>
+                        <div className="show-nutrition">
+                            {nutritionInfo.map(info => (
+                                <ul key={info.label}>
+                                    <li>
+                                        <span>{info.label}</span>
+                                        <span style={{ fontWeight: 500 }}>
+                                            {Math.floor(info.total)}{info.unit}
+                                        </span>
+                                    </li>
+                                </ul>
+                            ))}
+                        </div>
                     </div>
-                    <ul className="modal-list">
-                        {props.data.recipe.ingredientLines.map((ingredients, index) => (
-                            <li key={index}>{ingredients}</li>
-                        ))}
-                    </ul>
+
+                    <div className="modal-section">
+                        <p className="modal-section-label">Ingredients</p>
+                        <ul className="modal-list">
+                            {props.data.recipe.ingredientLines.map((ingredients, index) => (
+                                <li key={index}>{ingredients}</li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
+
                 <div className="recipe-link">
                     {/* <span className="recipe-link-dot" /> */}
                     <a href={props.data.recipe.url} target="_blank" rel="noopener noreferrer" className="modal-full-recipe">Full recipe ↗</a>
                     <button onClick={props.onClose} className="modal-full-recipe">Close</button>
                 </div>
+
                 <div className="modal-footer">
                 </div>
             </div>
