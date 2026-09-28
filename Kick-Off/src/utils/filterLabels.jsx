@@ -6,6 +6,10 @@ const allowedLabels = new Set([
     'Soy-Free',
     'Sesame-Free',
     'Shellfish-Free',
+    'FODMAP-Free',
+    'Sugar-Conscious',
+    'Keto-Friendly',
+    'Paleo',
     'No oil added'
 ]);
 

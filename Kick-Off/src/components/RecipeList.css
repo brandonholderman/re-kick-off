@@ -75,25 +75,27 @@
     padding: 16px 18px 18px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0.5rem;
     flex: 1;
 }
 
 .recipe-label {
     font-size: 14px;
     font-weight: 500;
-    line-height: 1.45;
+    margin-bottom: 0;
+    /* line-height: 1.45; */
     color: var(--color-text);
-    letter-spacing: -0.01em;
+    /* letter-spacing: -0.01em; */
 }
 
 .recipe-meta {
     display: flex;
     align-items: center;
-    gap: 4px;
-    font-size: 8px;
+    /* gap: 4px; */
+    font-size: 12px;
     color: var(--color-text-mid);
     font-weight: 400;
+    padding-bottom: 0.2rem;
 }
 
 .recipe-meta-dot {
@@ -102,6 +104,13 @@
     border-radius: 50%;
     background: var(--color-teal);
     display: inline-block;
+}
+
+.recipe-button {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
 }
 
 .details-button {

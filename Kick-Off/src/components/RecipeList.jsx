@@ -34,11 +34,11 @@ const RecipeList = ({ data }) => {
                         {/* {mealType && totalTime && <span className="recipe-meta-dot" />} */}
                         {/* {totalTime && <span>{totalTime}</span>} */}
                 {/* )} */}
-                <div className="recipe-button">
-                    <button className="details-button"
-                        onClick={() => { setShow(true); setRecipeData(data) }}>Recipe Details</button>
-                    <RecipeDetails onClose={() => setShow(false)} show={show} data={recipeData} />
-                </div>
+            </div>
+            <div className="recipe-button">
+                <button className="details-button"
+                    onClick={() => { setShow(true); setRecipeData(data) }}>Recipe Details</button>
+                <RecipeDetails onClose={() => setShow(false)} show={show} data={recipeData} />
             </div>
         </div>
     );

@@ -36,7 +36,7 @@ const RecipeDetails = (props) => {
                     <img src={recipe.image} alt="src\assets\placeholder.gif" />
 
                     <div className="modal-section show-allergy">
-                        <p className="modal-section-label">Dietary Info</p>
+                        <p className="modal-section-label">Allergy</p>
                         <ul>
                             {healthLabels.map(label => (
                                 <li key={label}>{label}</li>
@@ -56,7 +56,7 @@ const RecipeDetails = (props) => {
                     </div>
 
                     <div className="modal-section">
-                        <p className="modal-section-label">Nutrition Info</p>
+                        <p className="modal-section-label">Nutrition</p>
                         <div className="show-nutrition">
                             {nutritionInfo.map(info => (
                                 <ul key={info.label}>
@@ -75,7 +75,7 @@ const RecipeDetails = (props) => {
                 <div className="recipe-link">
                     {/* <span className="recipe-link-dot" /> */}
                     <a href={recipe.url} target="_blank" rel="noopener noreferrer" className="modal-full-recipe">Full recipe ↗</a>
-                    <button onClick={props.onClose} className="modal-full-recipe">Close</button>
+                    <button onClick={props.onClose} className="modal-close">Close</button>
                 </div>
 
                 {/* <div className="modal-footer">

@@ -48,7 +48,7 @@ const Search = () => {
                 <input className="search-button" type="submit" value="Search" />
             </form>
             {!searched && (
-                <p className="instruction-text">Kick off your next meal! Find recipes based on what you have on hand.</p>
+                <p className="instruction-text">Kick off your next meal! Find recipes based on the ingredients you have on hand.</p>
             )}
 
             {loading && (
