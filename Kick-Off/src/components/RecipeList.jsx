@@ -18,7 +18,7 @@ const RecipeList = ({ data }) => {
         <div className="recipe-tile">
             <img className="recipe-img" src={recipe.image} alt="src\assets\placeholder.gif" />
             <div className="recipe-card-body">
-                <h2 className="recipe-label">{recipe.label}</h2>
+                <h2 className="recipe-label" style={{ textTransform: "capitalize" }}>{recipe.label}</h2>
                     <div className="recipe-meta">
                         {cuisineType && (
                             <span style={{ textTransform: "capitalize" }}>{cuisineType}</span>
