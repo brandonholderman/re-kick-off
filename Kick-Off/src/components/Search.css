@@ -170,6 +170,10 @@
         padding-left: 0.6rem;
     }
 
+    .user-input::placeholder {
+        font-size: 13px;
+    }
+
 }
 
 @media (max-width: 375px) {
@@ -210,6 +214,10 @@
     .instruction-text {
         font-size: 13px;
         margin-left: -1rem;
+    }
+
+    .user-input::placeholder {
+        font-size: 12px;
     }
 
 }
