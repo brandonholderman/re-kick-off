@@ -21,7 +21,7 @@ const MoonIcon = () => (
 
 const App = () => {
     const [theme, setTheme] = useState(() => {
-        return localStorage.getItem("koff-theme") || "light";
+        return localStorage.getItem("koff-theme") || "dark";
     });
 
     useEffect(() => {
@@ -40,7 +40,7 @@ const App = () => {
                 onClick={toggleTheme}
                 aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
             >
-                {theme === "light" ? <MoonIcon /> : <SunIcon />}
+                {theme === "dark" ? <MoonIcon /> : <SunIcon />}
                 {/* <span className="theme-toggle-label">
                     {theme === "light" ? "Dark mode" : "Light mode"}
                 </span> */}
