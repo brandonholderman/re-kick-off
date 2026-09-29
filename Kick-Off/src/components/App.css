@@ -4,22 +4,22 @@
 :root {
     --color-accent: #8800B5;
     --color-accent-dark: #610082;
-/* Brand colors — extracted directly from kick-off-logo.png     */
+
     --color-teal: #148ca0;
     --color-teal-dark: #0e6e7e;
     --color-teal-light: #e6f5f7;
     --color-charcoal: #282828;
 
-    /* Surfaces & text */
+
     --color-surface: #f5f8f9;
     --color-surface-2: #f5f8f9;
     --color-white: #ffffff;
 
     --color-input-box: white;
     --color-input-text: black;
-    /* card / modal background    */
+
     --color-stone: #e0eaec;
-    /* borders & dividers         */
+
     --color-text: #282828;
     --color-text-mid: #5a7378;
     --color-overlay: rgba(14, 110, 126, 0.50);
@@ -36,26 +36,25 @@
     --transition: 160ms ease;
 }
 
-/* ─── Dark Mode Tokens ───────────────────────────────────────── */
 [data-theme="dark"] {
     --color-accent: #9c05ce;
     --color-accent-dark: #7a03a1;
 
     --color-teal: #2ab3cc;
-    /* brightened — readable on dark bg  */
+
     --color-teal-dark: #1e92a8;
     --color-teal-light: rgba(42, 179, 204, 0.15);
     --color-charcoal: #202122;
-    /* inverted — light text             */
+
     --color-input-box: #1a2c30;
     --color-input-text: white;
 
     --color-surface: #0f1a1c;
-    /* deep teal-black page bg           */
+
     --color-surface-2: #1a2c30;
-    /* card / modal bg                   */
+
     --color-stone: #2a4048;
-    /* borders & dividers                */
+
     --color-text: #e8eef0;
     --color-text-mid: #7aaab4; 
     --color-overlay: rgba(0, 0, 0, 0.70);
@@ -65,11 +64,9 @@
     --shadow-modal: 0 24px 64px rgba(0, 0, 0, 0.60);
 }
 
-/* base styles */
 * {
     box-sizing: border-box;
     /* font-family: 'Montserrat'; */
-    /* background-color: #2b2828; */
 }
 
 body {
@@ -80,7 +77,6 @@ body {
     transition: background-color 250ms ease, color 250ms ease;
 }
 
-/* ─── App Shell ─────────────────────────────────────────────── */
 .App {
     min-height: 100vh;
     background-color: var(--color-surface);

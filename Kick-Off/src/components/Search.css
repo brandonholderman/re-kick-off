@@ -41,16 +41,6 @@
     cursor: pointer;
 }
 
-
-/* Recipe display styles */
-/* .recipe-list {
-    display: grid;
-    margin-top: 50px;
-    margin-left: 3%;
-    align-items: baseline;
-    grid-template-columns: 30vw 30vw 30vw;
-} */
-
 .recipe-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
