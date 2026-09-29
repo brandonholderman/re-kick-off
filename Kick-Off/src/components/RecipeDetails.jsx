@@ -48,7 +48,7 @@ const RecipeDetails = (props) => {
                         <p className="modal-section-label">Ingredients</p>
                         <ul className="modal-list">
                             {ingredientInfo.map(ingredients => (
-                                <li key={uuid()}>{ingredients}</li>
+                                <li key={uuid()}><span>{ingredients}</span></li>
                             ))}
                         </ul>
                     </div>
