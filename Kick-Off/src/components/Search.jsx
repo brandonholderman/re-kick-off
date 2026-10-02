@@ -41,7 +41,7 @@ const Search = () => {
 
     return (
         <div className="container">
-            <img src="src\assets\kick-off-logo.png" className="logo" alt="src/assets/placeholder.gif" />
+            <img src="public\kick-off-logo.png" className="logo" alt="public/placeholder.gif" />
             <form className="search-form" onSubmit={handleSubmit}>
                 <input 
                     className="user-input" 
