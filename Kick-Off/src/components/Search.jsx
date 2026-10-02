@@ -1,6 +1,6 @@
 import { useState } from "react";
 import RecipeList from "./RecipeList";
-import Axios from "axios";
+// import Axios from "axios";
 import "./Search.css"
 
 const Search = () => {
@@ -9,18 +9,23 @@ const Search = () => {
     const [loading, setLoading] = useState(false);
     const [searched, setSearched] = useState(false);
 
-    const APP_ID = import.meta.env.VITE_CONNECTION_ID;
-    const APP_KEY = import.meta.env.VITE_CONNECTION_KEY;
+    // const APP_ID = import.meta.env.VITE_CONNECTION_ID;
+    // const APP_KEY = import.meta.env.VITE_CONNECTION_KEY;
 
-    const urlV2 = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
+    // const urlV2 = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
     const getRecipes = async () => {
         setLoading(true);
         setSearched(true);
         try {
-            let result = await Axios.get(urlV2);
-            setRecipes(result.data.hits);
-            console.log(result.data.hits);
+            // let result = await Axios.get(urlV2);
+            // setRecipes(result.data.hits);
+            // console.log(result.data.hits);
+
+            const response = await fetch(`/api/chat?q=${encodeURIComponent(query)}`);
+            // const response = await fetch(urlV2);
+            const result = await response.json();
+            setRecipes(result.hits);
         } catch(err) {
             console.error('Failed to fetch recipes:', err);
             setRecipes([]);
@@ -41,7 +46,7 @@ const Search = () => {
                 <input 
                     className="user-input" 
                     type="text"
-                    placeholder="Search by ingredient — chicken, lemon, garlic…"
+                    placeholder="Search by ingredient - chicken, lemon, garlic…"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                 />
