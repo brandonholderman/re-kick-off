@@ -78,19 +78,19 @@ body {
 }
 
 .App {
-    min-height: 100vh;
+    min-height: 100dvh;
     background-color: var(--color-surface);
     transition: background-color 250ms ease;
 }
 
 .theme-toggle {
     position: fixed;
-    top: 1.3rem;
-    right: 1.3rem;
+    top: 0.7rem;
+    right: 1rem;
     z-index: 200;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.4rem;
     background: var(--color-surface-2);
     border: 1.5px solid var(--color-stone);
     border-radius: var(--radius-lg);

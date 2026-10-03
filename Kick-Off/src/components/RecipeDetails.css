@@ -16,7 +16,7 @@
 .modal-content {
     width: 100%;
     max-width: 42rem;
-    max-height: 85vh;
+    max-height: 80dvh;
     background: var(--color-surface-2);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-card);
@@ -231,6 +231,6 @@
 
 @media (max-width: 375px) {
     .modal-content {
-        max-height: 82vh;
+        max-height: 82dvh;
     } 
 }

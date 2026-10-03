@@ -8,12 +8,18 @@ const Search = () => {
     const [loading, setLoading] = useState(false);
     const [searched, setSearched] = useState(false);
 
+    // const APP_ID  = import.meta.env.VITE_CONNECTION_ID;
+    // const APP_KEY = import.meta.env.VITE_CONNECTION_KEY;
+
+    // const urlV2 = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
+
    
     const getRecipes = async () => {
         setLoading(true);
         setSearched(true);
         try {
             const response = await fetch(`/api/chat?q=${encodeURIComponent(query)}`);
+            // const response = await fetch(urlV2);
             const result = await response.json();
             setRecipes(result.hits);
         } catch(err) {
