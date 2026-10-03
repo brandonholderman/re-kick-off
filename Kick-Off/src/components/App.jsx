@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Search from './Search';
-// import '../../unused/App.css';
 import './App.css';
 
 const SunIcon = () => (

@@ -4,9 +4,6 @@ export async function onRequestGet(context) {
     const APP_ID  = env.API_CONNECTION_ID;
     const APP_KEY = env.API_CONNECTION_KEY;
 
-    // const APP_ID  = env.VITE_CONNECTION_ID;
-    // const APP_KEY = env.VITE_CONNECTION_KEY;
-
     const url = new URL(request.url);
     const query = url.searchParams.get('q');
 
