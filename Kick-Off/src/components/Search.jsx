@@ -1,8 +1,6 @@
 import { useState } from "react";
 import RecipeList from "./RecipeList";
 import "./Search.css"
-// import Axios from "axios";
-// import { onRequestGet } from "../../api/chat";
 
 const Search = () => {
     const [query, setQuery] = useState("");
@@ -10,22 +8,11 @@ const Search = () => {
     const [loading, setLoading] = useState(false);
     const [searched, setSearched] = useState(false);
 
-    // const APP_ID = import.meta.env.VITE_CONNECTION_ID;
-    // const APP_KEY = import.meta.env.VITE_CONNECTION_KEY;
-
-    // const urlV2 = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
-    // const urlHandler = onRequestGet(`/api/chat?q=${encodeURIComponent(query)}`)
-    
+   
     const getRecipes = async () => {
         setLoading(true);
         setSearched(true);
         try {
-            // let result = await Axios.get(urlV2);
-            // setRecipes(result.data.hits);
-            // console.log(result.data.hits);
-
-            // const response = await fetch(urlHandler);
-            // const response = await fetch(urlV2);
             const response = await fetch(`/api/chat?q=${encodeURIComponent(query)}`);
             const result = await response.json();
             setRecipes(result.hits);
