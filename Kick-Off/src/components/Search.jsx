@@ -14,9 +14,9 @@ const Search = () => {
     // const APP_KEY = import.meta.env.VITE_CONNECTION_KEY;
 
     // const urlV2 = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
-    // const urlHandler = onRequestGet(`/api/chat?q=${encodeURIComponent(query)}`)
-
+    
     const getRecipes = async () => {
+        const urlHandler = await onRequestGet(`/api/chat?q=${encodeURIComponent(query)}`)
         setLoading(true);
         setSearched(true);
         try {
@@ -24,7 +24,8 @@ const Search = () => {
             // setRecipes(result.data.hits);
             // console.log(result.data.hits);
 
-            const response = await fetch(`/api/chat?q=${onRequestGet(query)}`);
+            const response = await fetch(urlHandler);
+            // const response = await fetch(`/api/chat?q=${encodeURIComponent(query)}`);
             // const response = await fetch(urlV2);
             const result = await response.json();
             setRecipes(result.hits);
