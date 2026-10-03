@@ -1,6 +1,6 @@
 import { useState } from "react";
 import RecipeList from "./RecipeList";
-import "./Search.css"
+import "./Search.css";
 
 const Search = () => {
     const [query, setQuery] = useState("");
@@ -31,7 +31,7 @@ const Search = () => {
 
     return (
         <div className="container">
-            <img src="src\assets\kick-off-logo-svg.svg" className="logo" alt="src\assets\placeholder.gif" />
+            <img src="/kick-off-logo.png" className="logo" alt="/placeholder-300x300.png" />
             <form className="search-form" onSubmit={handleSubmit}>
                 <input 
                     className="user-input" 
