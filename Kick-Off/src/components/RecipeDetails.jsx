@@ -33,7 +33,7 @@ const RecipeDetails = (props) => {
                     </button> */}
                 </div>
                 <div className="modal-body">
-                    <img src={recipe.image} alt="public\placeholder.gif" />
+                    <img src={recipe.image} alt="src\assets\placeholder.gif" />
 
                     <div className="modal-section show-allergy">
                         <p className="modal-section-label">Dietary</p>

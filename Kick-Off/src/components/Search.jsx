@@ -2,6 +2,7 @@ import { useState } from "react";
 import RecipeList from "./RecipeList";
 // import Axios from "axios";
 import "./Search.css"
+import { onRequestGet } from "../../api/chat";
 
 const Search = () => {
     const [query, setQuery] = useState("");
@@ -13,6 +14,7 @@ const Search = () => {
     // const APP_KEY = import.meta.env.VITE_CONNECTION_KEY;
 
     // const urlV2 = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
+    const urlHandler = onRequestGet(`/api/chat?q=${encodeURIComponent(query)}`)
 
     const getRecipes = async () => {
         setLoading(true);
@@ -22,7 +24,7 @@ const Search = () => {
             // setRecipes(result.data.hits);
             // console.log(result.data.hits);
 
-            const response = await fetch(`/api/chat?q=${encodeURIComponent(query)}`);
+            const response = await fetch(urlHandler);
             // const response = await fetch(urlV2);
             const result = await response.json();
             setRecipes(result.hits);
@@ -41,7 +43,7 @@ const Search = () => {
 
     return (
         <div className="container">
-            <img src="public\kick-off-logo.png" className="logo" alt="public/placeholder.gif" />
+            <img src="src\assets\kick-off-logo.png" className="logo" alt="src\assets\placeholder.gif" />
             <form className="search-form" onSubmit={handleSubmit}>
                 <input 
                     className="user-input" 
